@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="Stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<div class="popup" id="meuPopup">
+    <div class="popup-content">
+        <img src="img/tutorial1.png" alt="Imagem do Popup">
+        <p style="font-family: Arial, Helvetica, sans-serif">Use o valor base de cada atributo para fazer os calculos.
+        </p>
+        <p style="font-family: Arial, Helvetica, sans-serif">O valor base de cada atributo pode ser encontrado ao passar
+            o mouse
+            em cima do status, será o valor em branco como mostra na imagem acima.
+        </p>
+        <button onclick="fecharPopup()">Fechar</button>
+    </div>
+</div>
+
+<body>
+    <ul class="lista">
+        <li><a>AT: </a><input placeholder="clon AT" id="AT"></li>
+        <li><a>CT: </a><input placeholder="clon CT" id="CT"></li>
+        <li><a>BL: </a><input placeholder="clon Bl" id="BL" value="1" disabled><a> valor igual para todos os
+                digimons</a></li>
+        <li><a>EV: </a><input placeholder="clon EV" id="EV"></li>
+        <li><a>HP: </a><input placeholder="clon HP" id="HP"></li>
+        <li><button onclick="calcular()" style="font-family: 'Orbitron', sans-serif">calcular</button></li>
+    </ul>
+
+    <div class="divTable">
+    <table>
+        <thread>
+            <th>Nivel</th>
+            <th>AT</th>
+            <th>CT</th>
+            <th>BL</th>
+            <th>EV</th>
+            <th>HP</th>
+        </thread>
+        <tbody>
+            <tr class="nivel1">
+                <td>1</td>
+                <td id="valueAT1"></td>
+                <td id="valueCT1"></td>
+                <td id="valueBL1"></td>
+                <td id="valueEV1"></td>
+                <td id="valueHP1"></td>
+            </tr>
+            <tr class="nivel1">
+                <td>2</td>
+                <td id="valueAT2"></td>
+                <td id="valueCT2"></td>
+                <td id="valueBL2"></td>
+                <td id="valueEV2"></td>
+                <td id="valueHP2"></td>
+            </tr>
+            <tr class="nivel1">
+                <td>3</td>
+                <td id="valueAT3"></td>
+                <td id="valueCT3"></td>
+                <td id="valueBL3"></td>
+                <td id="valueEV3"></td>
+                <td id="valueHP3"></td>
+            </tr>
+            <tr class="nivel2">
+                <td>4</td>
+                <td id="valueAT4"></td>
+                <td id="valueCT4"></td>
+                <td id="valueBL4"></td>
+                <td id="valueEV4"></td>
+                <td id="valueHP4"></td>
+            </tr>
+            <tr class="nivel2">
+                <td>5</td>
+                <td id="valueAT5"></td>
+                <td id="valueCT5"></td>
+                <td id="valueBL5"></td>
+                <td id="valueEV5"></td>
+                <td id="valueHP5"></td>
+            </tr>
+            <tr class="nivel2">
+                <td>6</td>
+                <td id="valueAT6"></td>
+                <td id="valueCT6"></td>
+                <td id="valueBL6"></td>
+                <td id="valueEV6"></td>
+                <td id="valueHP6"></td>
+            </tr>
+            <tr class="nivel3">
+                <td>7</td>
+                <td id="valueAT7"></td>
+                <td id="valueCT7"></td>
+                <td id="valueBL7"></td>
+                <td id="valueEV7"></td>
+                <td id="valueHP7"></td>
+            </tr>
+            <tr class="nivel3">
+                <td>8</td>
+                <td id="valueAT8"></td>
+                <td id="valueCT8"></td>
+                <td id="valueBL8"></td>
+                <td id="valueEV8"></td>
+                <td id="valueHP8"></td>
+            </tr>
+            <tr class="nivel3">
+                <td>9</td>
+                <td id="valueAT9"></td>
+                <td id="valueCT9"></td>
+                <td id="valueBL9"></td>
+                <td id="valueEV9"></td>
+                <td id="valueHP9"></td>
+            </tr>
+            <tr class="nivel4">
+                <td>10</td>
+                <td id="valueAT10"></td>
+                <td id="valueCT10"></td>
+                <td id="valueBL10"></td>
+                <td id="valueEV10"></td>
+                <td id="valueHP10"></td>
+            </tr>
+            <tr class="nivel4">
+                <td>11</td>
+                <td id="valueAT11"></td>
+                <td id="valueCT11"></td>
+                <td id="valueBL11"></td>
+                <td id="valueEV11"></td>
+                <td id="valueHP11"></td>
+            </tr>
+            <tr class="nivel4">
+                <td>12</td>
+                <td id="valueAT12"></td>
+                <td id="valueCT12"></td>
+                <td id="valueBL12"></td>
+                <td id="valueEV12"></td>
+                <td id="valueHP12"></td>
+            </tr>
+            <tr class="nivel5">
+                <td>13</td>
+                <td id="valueAT13"></td>
+                <td id="valueCT13"></td>
+                <td id="valueBL13"></td>
+                <td id="valueEV13"></td>
+                <td id="valueHP13"></td>
+            </tr>
+            <tr class="nivel5">
+                <td>14</td>
+                <td id="valueAT14"></td>
+                <td id="valueCT14"></td>
+                <td id="valueBL14"></td>
+                <td id="valueEV14"></td>
+                <td id="valueHP14"></td>
+            </tr>
+            <tr class="nivel5">
+                <td>15</td>
+                <td id="valueAT15"></td>
+                <td id="valueCT15"></td>
+                <td id="valueBL15"></td>
+                <td id="valueEV15"></td>
+                <td id="valueHP15"></td>
+            </tr>
+        </tbody>
+    </table> 
+</div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
