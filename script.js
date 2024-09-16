@@ -24,6 +24,7 @@ function calcular() {
     }
 
     if (CT != null && CT != 0) {
+        CT = substituirVirgulaPorPonto(CT)
         document.getElementById("valueCT1").textContent = parseFloat(CT * 0.15).toFixed(2)
         document.getElementById("valueCT2").textContent = parseFloat(CT * 0.30).toFixed(2)
         document.getElementById("valueCT3").textContent = parseFloat(CT * 0.45).toFixed(2)
@@ -108,4 +109,13 @@ function abrirPopup() {
   window.onload = function() {
     abrirPopup();
   };
+
+  function substituirVirgulaPorPonto(numero) {
+    // Verifica se o número contém uma vírgula e a substitui por um ponto
+    let numeroCorrigido = numero.includes(',') ? numero.replace(',', '.') : numero;
+    
+    // Converte o valor corrigido em um número de ponto flutuante
+    return parseFloat(numeroCorrigido);
+}
+
   
